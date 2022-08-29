@@ -26,7 +26,7 @@ RGB_list = [
 for rgb_list in RGB_list:
     zip_name = f'/home/minu/다운로드/hyodol/{rgb_list}.zip'
     with ZipFile(zip_name, 'r') as zip:
-        print(f'{rgb_list}.zip')
+        print(f'1/4 extracting {rgb_list}.zip')
         # zip.printdir()
         zip.extractall('/home/minu/다운로드/hyodol/')
         zip.close()
@@ -50,9 +50,9 @@ for rgb_list in RGB_list:
     
     if os.path.exists(zip_name):
         os.remove(zip_name)
-        print(f'remove {rgb_list}.zip')
+        print(f'2/4 remove {rgb_list}.zip')
     if os.path.exists(VIDEO_PATHS):
         shutil.rmtree(VIDEO_PATHS)
-        print(f'rmtree {people_folder}')
-    print(people_folder, 'done...')
-print('done!')
+        print(f'3/4 rmtree {people_folder}')
+    print(f'4/4 {people_folder} done...')
+print('complete!')
